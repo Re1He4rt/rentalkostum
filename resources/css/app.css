@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* Custom theme untuk Rental Kostum */
+@theme {
+    --color-primary-50: #f5f3ff;
+    --color-primary-500: #8b5cf6;
+    --color-primary-600: #7c3aed;
+    --color-primary-700: #6d28d9;
+    --font-display: "Poppins", sans-serif;
+}
+
+/* Custom utility */
+@layer components {
+    .btn-primary {
+        @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-4 py-2 rounded-lg transition;
+    }
+    .btn-secondary {
+        @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-4 py-2 rounded-lg transition;
+    }
+    .card {
+        @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5;
+    }
+    .input-field {
+        @apply w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none;
+    }
+    .badge {
+        @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+    }
+    .badge-success {
+        @apply bg-green-100 text-green-700;
+    }
+    .badge-danger {
+        @apply bg-red-100 text-red-700;
+    }
+    .badge-warning {
+        @apply bg-yellow-100 text-yellow-700;
+    }
+    .badge-info {
+        @apply bg-blue-100 text-blue-700;
+    }
+    .table-base {
+        @apply w-full text-sm text-left text-gray-600;
+    }
+    .table-base thead {
+        @apply bg-gray-50 text-xs uppercase text-gray-500;
+    }
+    .table-base th,
+    .table-base td {
+        @apply px-4 py-3 whitespace-nowrap;
+    }
+    .table-base tbody tr {
+        @apply border-t border-gray-100;
+    }
+}
